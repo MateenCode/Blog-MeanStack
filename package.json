@@ -1,0 +1,9 @@
+{
+  "name": "Blog-MEANStack",
+  "version": "1.0.0",
+  "description": "A full stack Mean APP",
+  "main": "index.js",
+  "repository": "https://github.com/MateenCode/Blog-MeanStack.git",
+  "author": "“mateen1222” <mateenkaziawebdev@gmail.com>",
+  "license": "MIT"
+}
