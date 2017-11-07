@@ -1,4 +1,4 @@
 module.exports = {
-  database: 'mongodb://localhost:27017/meanauth',
-  sercet: 'keyboardcat'
+  database: 'mongodb://localhost:27017/nodeauth',
+  secret: 'yoursecret'
 }

@@ -1,21 +1,22 @@
 {
-  "name": "Blog-MEANStack",
+  "name": "meanauthapp",
   "version": "1.0.0",
-  "description": "A full stack Mean APP",
-  "main": "index.js",
-  "repository": "https://github.com/MateenCode/Blog-MeanStack.git",
-  "author": "“mateen1222” <mateenkaziawebdev@gmail.com>",
-  "license": "MIT",
+  "description": "MEAN stack authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "jsonwebtoken": "^8.1.0",
-    "mongoose": "^4.13.0",
-    "nodemon": "^1.12.1",
-    "passport": "^0.4.0",
-    "passport-jwt": "^3.0.1",
-    "password": "^0.1.1"
-  }
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Brad Traversy",
+  "license": "ISC"
 }
