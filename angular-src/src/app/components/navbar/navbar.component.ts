@@ -19,6 +19,8 @@ export class NavbarComponent implements OnInit {
   onLogoutClick(){
     this.authService.logout();
     window.alert("No Dont Leave 😭")
+    this.router.navigate(['/login']);
+    return false
   }
 
 
