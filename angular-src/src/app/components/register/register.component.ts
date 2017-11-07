@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {ValidateService} from '../../services/validate.service'
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   name: String;
@@ -12,7 +14,11 @@ export class RegisterComponent implements OnInit {
   email: String;
   password: String;
 
-  constructor(private validateService: ValidateService) { }
+  constructor(
+    private validateService: ValidateService,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -36,6 +42,16 @@ export class RegisterComponent implements OnInit {
         console.log('Please fill in email');
       return false;
     }
-  }
 
+    // Register User
+    this.authService.registerUser(user).subscribe(data => {
+    if(data.success){
+      window.alert('CONGRATS 🎊 ')
+      this.router.navigate(['login'])
+    }else {
+      window.alert('NO YOU LOSER  👿 ')
+      this.router.navigate(['register'])
+    }
+  })
+  }
 }

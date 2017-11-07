@@ -1,5 +1,7 @@
 <ul>
+  <li><a>Blogger</a></li>
   <li><a [routerLink]="['/']">Home</a></li>
   <li style="float:right"><a class="active" [routerLink]="['/login']">login</a></li>
   <li style="float:right"><a class="active" [routerLink]="['/register']">Register</a></li>
+  <li style="float:right"><a class="active-red" (click)="onLogoutClick()">logout</a></li>
 </ul>
